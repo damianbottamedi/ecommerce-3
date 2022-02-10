@@ -1,0 +1,16 @@
+<div class="prod-select__primer-container">
+    <div class="prod-select__container-cruz">
+        <img src="../img/close.png" alt="" class="prod-select__cruz" id="prod-select__cruz" onclick="closeProdSelect()">
+    </div>
+    <h3 class="prod-select__nombre">{{producto.nombre}}</h3>
+</div>
+
+<div class="prod-select__container-datos">
+    <img src="{{producto.foto}}" alt="{{producto.nombre}}" class="prod-select__foto">
+    <div class="prod-select__container-descripcion">
+        <pre class="prod-select__descripcion">{{producto.descripcion}}</pre>
+        <p class="prod-select__marca">Marca: {{producto.marca}}</p>
+        <p class="prod-select__precio">Precio: ${{producto.precio}}</p>
+        <button class="prod-select__button" onclick="agregarAlCarrito('{{producto.id}}')">Agregar al carrito<i class="fas fa-shopping-cart prod-select__icon-carrito"></i></button>
+    </div>
+</div>

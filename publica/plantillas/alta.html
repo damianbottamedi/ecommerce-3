@@ -1,0 +1,81 @@
+<section class="section__container-form">
+    <h1 class="alta__title main__h1">Cargar producto</h1>
+
+    <form action="alta.html" class="form-registro" id="form-registro">
+        
+        <div class="form-registro__container-input">
+            <input type="text" name="title" class="form-registro__input" id="form-registro__input__title" placeholder="Título">
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__title"></p>
+        </div>
+
+        <div class="form-registro__container-input">
+            <input type="text" name="mark" class="form-registro__input" id="form-registro__input__mark" placeholder="Marca">
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__mark"></p>
+        </div>
+
+        <div class="form-registro__container-input form-registro__container-input__price">
+            <input type="tel" name="price" class="form-registro__input form-registro__input__price" id="form-registro__input__price" placeholder="Precio">
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__price"></p>
+        </div>
+
+        <div class="form-registro__container-input form-registro__container-input__stock">
+            <input type="number" name="stock" class="form-registro__input form-registro__input__stock" id="form-registro__input__stock" placeholder="Stock">
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__stock"></p>
+        </div>      
+
+        <div class="form-registro__container-input form-registro__container-input__category">
+            <select name="form-registro__category" id="" class="form-registro__input__category form-registro__input">
+                    <option value="" selected>Categoría</option>
+                    <option value="Celulares">Celulares</option>
+                    <option value="Notebooks">Notebooks</option>
+                    <option value="Computadoras">Computadoras</option>
+                    <option value="Televisores">Televisores</option>
+                    <option value="Pantallas">Pantallas</option>
+                    <option value="Tablets">Tablets</option>
+                    <option value="Audio">Audio</option>
+                    <option value="Impresoras">Impresoras</option>
+                    <option value="Camaras">Cámaras</option>
+                    <option value="Consolas">Consolas</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Componentes">Componentes</option>
+            </select>
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__category"></p>
+        </div>
+
+        <!-- <div class="form-registro__container-input form-registro__container-input__photo">
+            <label for="form-registro__input__photo">Subir imagen</label>
+            <input type="text" name="photo" class="form-registro__input form-registro__input" id="form-registro__input__photo">
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__photo"></p>
+        </div> -->
+
+        <div id="form-registro__container-input__drop-area" class="form-registro__container-input form-registro__container-input__drop-area">
+            <div class="form-registro__container-input__drop-area__div-btn-progress">
+                <div class="form-registro__container-input__drop-area__div-btn">
+                    <input type="file" id="foto-arrastrable" accept="imagen/*" onchange="handleFiles(this.files)">
+                    <label for="foto-arrastrable" class="form-registro__container-input__drop-area__btn-subir-foto">Cargar foto</label>
+                    <p>o suéltala aquí</p>
+                </div>
+                <progress id="form-registro__container-input__drop-area__bar-progress" max="100" value="0"></progress>
+            </div>
+            <div id="form-registro__container-input__drop-area__div-gallery" class="form-registro__container-input__drop-area__div-gallery"><img src="" alt=""></div>
+        </div>
+
+        <div class="form-registro__container-input form-registro__container-input__textarea">
+            <textarea name="descripcion-producto" id="" class="form-registro__input form-registro__input__textarea" placeholder="Escriba una descripción..."></textarea>
+            <p class="form-registro__mensaje-error" id="form-registro__mensaje-error__textarea"></p>
+        </div>
+
+
+        <div class="form-registro__envio-gratis">
+            <input type="checkbox" name="envio-gratis" id="form-registro__envio-gratis__input" class="form-registro__input form-registro__input__envio-gratis">
+            <label for="form-registro__envio-gratis__input" class="form-registro__input__envio-gratis__label">Ofrecer envío sin cargo.</label>
+        </div>
+
+        <div class="form-registro__container-button">
+            <input type="submit" value="Cargar producto" class="form-registro__button" id="form-registro__button">
+            <p class="form-registro__mensaje-error form-registro__mensaje-error__boton" id="form-registro__mensaje-error__boton"></p>
+        </div>
+    </form>
+
+    <div class="listado-productos"></div>
+</section>

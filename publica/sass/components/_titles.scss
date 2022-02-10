@@ -1,0 +1,18 @@
+.main{
+    &__h1{
+        font-size: 2em;
+        margin: 2rem 5vw .7rem
+    }
+
+    &__h2{
+        margin: 0 5vw 1rem;
+        font-size: .9em;
+        font-weight: normal;
+    }
+}
+
+.container-productos__title{
+    @media (max-width: 440px){
+        margin: 1.5rem 5vw .7rem;
+    }
+}

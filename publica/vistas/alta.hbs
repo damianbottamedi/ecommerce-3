@@ -1,0 +1,84 @@
+{{!-- {{{#if productos.length}}
+    <table class="alta-table__table-productos-cargados">
+        <tr>
+            <th>Nombre</th>
+            <th>Foto</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categroría</th>
+            <th>Envío</th>
+        </tr>
+        {{#each productos}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>
+                <img src="{{foto}}" alt="{{nombre}}" width="50">
+            </td>
+            <td>{{marca}}</td>
+            <td>${{precio}}</td>
+            <td>{{stock}}</td>
+            <td>{{categoria}}</td>
+
+            {{#if envio}}
+            <td>Si</td>
+            {{else}}
+            <td>No</td>
+            {{/if}}
+            <td>
+                <button onclick="productosController.actualizarProducto('{{id}}')">Actualizar</button>
+                <button onclick="productosController.eliminarProducto('{{id}}')">Eliminar</button>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}} --}}
+
+
+
+{{!-- RESPONSIVEEEEEEE --}}
+{{#if productos.length}}
+<table class="dataTable">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Foto</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categroría</th>
+            <th>Envío</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each productos}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>
+                <img src="{{foto}}" alt="{{nombre}}" width="50">
+            </td>
+            <td>{{marca}}</td>
+            <td>${{precio}}</td>
+            <td>{{stock}}</td>
+            <td>{{categoria}}</td>
+
+            {{#if envio}}
+            <td>Si</td>
+            {{else}}
+            <td>No</td>
+            {{/if}}
+            <td class="alta-table__td-botones">
+                <button class="alta-table__btn alta-table__btn__actualizar" onclick="productosController.actualizarProducto('{{id}}')">Actualizar</button>
+                <button class="alta-table__btn alta-table__btn__eliminar" onclick="productosController.eliminarProducto('{{id}}')">Eliminar</button>
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}

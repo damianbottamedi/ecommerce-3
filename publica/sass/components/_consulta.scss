@@ -1,0 +1,80 @@
+.consulta{
+    &__container{
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        margin: 2em 10vw 3.5em;
+        background-color: var(--variable-color1);
+        padding: 2em 0;
+        border-radius: 30px;
+        @media (max-width: 1000px){
+            margin: 2.3em 5vw 3.5em;
+        }
+    }
+
+    &__img-container{
+        margin-top: 3.5em;
+        background-color: #fff;
+        height: fit-content;
+        padding: 2.5em;
+        border-radius: 50%;
+        @media (max-width: 900px){
+            display: none;
+        }
+    }
+
+    &__img{
+        width: 10em;
+    }
+
+    &__form{
+        text-align: center;
+    }
+
+    &__input{
+        height: 2em;
+        border: none;
+        width: 28rem;
+        padding: 20px;
+        border-radius: 20px;
+        font-size: 1em;
+        margin-bottom: 1em;
+        font-family: 'Fira Sans', sans-serif;
+        outline-color: var(--variable-color3);
+        @media (max-width: 550px){
+            width: 70vw;
+            font-size: .9em;
+        }
+    }
+
+    &__textarea{
+        height: 18em;
+        width: 28rem;
+        border-radius: 17px;
+        font-family: 'Fira Sans', sans-serif;
+        @media (max-width: 550px){
+            width: 70vw;
+        }
+    }
+
+    &__container-button{
+        text-align: center;
+        margin-top: .8em;
+    }
+
+    &__button{
+        border-radius: 25px;
+        padding: .7em 2.5em;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+        font-family: 'Fira Sans', sans-serif;
+        color: #363636;
+
+        &:hover,&:focus{
+            background-color: var(--variable-color2);
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+/***************************************
+                MAIN
+***************************************/
+
+.productos__container-img{
+    text-align: center;
+    
+    &__img{
+        margin-top: 2rem;
+        width: 65vw;
+        @media (max-width: 722px){
+            width: 80vw;
+        }
+        @media (max-width: 440px){
+            width: 85vw;
+        }
+    }
+}
+
+
+.cards-container{
+    margin: 2em 5vw 4em;
+    display: flex;
+    gap: 1.3em;
+    flex-wrap: wrap;
+    @media (max-width: 722px){
+        justify-content: center;
+    }
+    
+}
+
+main{
+    @media (max-width: 750px){
+        margin-top: 10.4em;
+    }
+}
+
+
+.section__container-form{
+    display: flex;
+    flex-direction: column;
+}

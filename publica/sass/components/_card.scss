@@ -1,0 +1,122 @@
+.card{
+    width: 200px;
+    height: 320px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #363636;
+    flex-grow: 1;
+    max-width: 250px;
+    cursor: pointer;
+
+    @media (max-width: 467px){
+        height: 140px;
+        width: 300px;
+        max-width: none;
+    }
+
+    &__article{
+        position: relative;
+        transform-style: preserve-3d;
+        transition: .8s;        
+    }
+    
+
+    &__container-img{
+        height: 200px;
+        @media (max-width: 467px){
+            height: 140px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+
+        @media (max-width: 467px){
+            height: 7em;
+            width: 7em;
+        }
+    }
+    
+    &__info{
+        padding-top: 1.1em;
+        padding-left: 1em;
+        padding-right: .5em;
+        border-top: var(--variable-color2) solid 2px;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 467px){
+            border-top: none;
+            padding-left: .5em;
+        }
+        
+
+        &__title{
+            margin-bottom: .3em;
+            color: #363636;
+        }
+
+        &__precio{
+            color: var(--variable-color1);
+        }
+    }
+
+    &:focus, &:hover{
+        transform: scale(1.03);
+        box-shadow: 0px 26px 31px -6px rgba(0,0,0,0.38);
+        -webkit-box-shadow: 0px 26px 31px -6px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 26px 31px -6px rgba(0,0,0,0.38);
+        transition: .2s;
+        z-index: 10;
+    }
+
+    &:hover .card__article{
+        transform: rotateY(180deg);
+
+    }
+
+    &__front-container, &__back-container{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    &__back-container{
+        transform: rotateY(180deg);
+
+
+        &__text{
+            text-decoration: none;
+            color: #fff;
+            background-color: var(--variable-color1);
+            border-radius: 20px;
+            padding: .6em 1.4em;
+            border: none;
+            width: fit-content;
+            cursor: pointer;
+            margin: auto;
+            margin-top: 4em;         
+
+            @media (max-width: 467px){
+                font-size: .8em;
+            }
+        }
+    }
+
+    &__front-container{
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 467px){
+            flex-direction: row;
+        }
+    }   
+
+}

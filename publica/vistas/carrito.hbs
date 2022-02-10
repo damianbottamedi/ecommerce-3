@@ -1,0 +1,42 @@
+<div class="carrito__container-cruz">
+    <h2 class="carrito__title">Mi carrito<i class="fas fa-shopping-cart"></i></h2>
+
+    <img src="../img/close.png" alt="" class="carrito__cruz" id="carrito__cruz" onclick="closeCarrito()">
+</div>
+
+<div class="carrito__container-table">
+{{#if carrito.length}}
+    <table class="table-productos-cargados carrito__table">
+        <tr class="carrito__table__primer-encabezado">
+            <th>Cantidad</th>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Envío</th>
+        </tr>
+        {{#each carrito}}
+        <tr>
+            <td>{{cantidad}}</td>
+            <td>
+                <img src="{{foto}}" alt="{{nombre}}" width="50">
+            </td>
+            <td style="font-weight: 500;" class="carrito__table__td-nombre">{{nombre}}</td>
+            <td>${{precio}}</td>
+            {{#if envio}}
+            <td>Si</td>
+            {{else}}
+            <td>No</td>
+            {{/if}}
+            <td>
+                <button class="carrito__btn-eliminar" onclick="carritoController.sacarDelCarrito('{{id}}')"><img class="carrito__btn-eliminar__img" src="../img/remove.png" alt=""></button>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<div class="carrito__container-btn">
+    <button onclick="carritoController.comprarCarrito()" class="carrito__btn-compra">Comprar<i class="fas fa-shopping-cart carrito__icon-carrito"></i></button>
+</div>
+{{else}}
+    <p class="carrito__p-no-tienes">No tienes productos en tu carrito</p>
+{{/if}}

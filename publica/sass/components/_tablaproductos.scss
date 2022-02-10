@@ -1,0 +1,154 @@
+.listado-productos{
+    margin: 2em 15vw 4em;
+    padding: 10px;
+
+  @media (max-width: 950px) {
+    margin: 2em 5vw 4em;
+  }
+}
+
+.alta-table__table-productos-cargados, .alta-table__table-productos-cargados th, .alta-table__table-productos-cargados td {
+    border: 1px solid var(--variable-color1);
+    border-collapse: collapse;
+}
+
+.alta-table__table-productos-cargados th, .alta-table__table-productos-cargados td{
+    padding: 10px;
+}
+
+.alta-table__table-productos-cargados th{
+    font-size: 1.1em;
+}
+
+.alta-table__table-productos-cargados thead{
+    float: left;
+}
+
+.alta-table{
+
+
+
+  &__btn{
+    font-size: .8em;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--variable-color1);
+    border-radius: 20px;
+    padding: 0.4em 0.8em;
+    border: none;
+    width: fit-content;
+    align-self: flex-end;
+    width: 80px;
+    cursor: pointer;
+
+
+    &__actualizar{
+      background-color: var(--variable-color1);
+      &:hover{
+        background-color: var(--variable-color2);
+      }
+    }
+    
+    &__eliminar{
+      background-color: #fd2323;
+      margin-top: .6em;
+      &:hover{
+        background-color: #ff6363;
+      }
+    }
+  }
+}
+  
+.dataTable {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  text-align: center;
+
+}
+  
+  .dataTable thead, .dataTable tbody, .dataTable thead tr, .dataTable th {
+    display: block;
+    text-align: center;
+
+  }
+
+  .dataTable img{
+    width: 70px;
+  }
+  
+  .dataTable thead {
+    float: left;
+  }
+  
+  .dataTable tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  
+  .dataTable td, .dataTable th {
+    padding: .625em;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid #fff;
+    border-collapse: collapse;
+  }
+  
+  .dataTable th {
+    text-align: left;
+    background: var(--variable-color1);
+    height: 80px;
+    text-align: center;
+    color: #f2f2f2;
+
+  }
+  
+  .dataTable tbody tr {
+    display: table-cell;
+  }
+  
+  .dataTable tbody td {
+    display: block;
+    height: 80px;
+  }
+  .dataTable tr{
+    background: var(--variable-color3);
+
+  }
+  
+  .dataTable tr:nth-child(odd) {
+    background: var(--variable-color2);
+  }
+  
+  @media screen and (min-width: 50em) {
+  
+    .dataTable {
+      display: table;
+    }
+    
+    .dataTable thead {
+      display: table-header-group;
+      float: none;
+    }
+    
+    .dataTable tbody {
+      display: table-row-group;
+    }
+    
+    .dataTable thead tr, .dataTable tbody tr {
+      display: table-row;
+    }
+    
+    .dataTable th, .dataTable tbody td {
+      display: table-cell;
+    }
+    
+    .dataTable td, .dataTable th {
+      width: auto;
+    }
+    
+}

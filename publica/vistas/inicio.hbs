@@ -1,0 +1,21 @@
+{{#if productos.length}}
+
+    {{#each productos}}
+     <div class="card" onclick="mostrarProducto('{{id}}')"> {{!--onclick="agregarAlCarrito('{{id}}')"> --}}
+        <article class="card__article">
+            <div class="card__front-container">
+                <div class="card__container-img"><img src="{{foto}}" class="card__img" alt="{{nombre}}"></div>
+                <div class="card__info">
+                    <h3 class="card__info__title">{{nombre}}</h3>
+                    <p class="card__info__precio">${{precio}}</p>
+                </div>
+            </div>
+            <div class="card__back-container">
+                <p class="card__back-container__text">Ver</p>
+            </div>
+        </article>
+    </div>
+    {{/each}}
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}
